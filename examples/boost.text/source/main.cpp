@@ -41,7 +41,7 @@
 #endif
 #include <cstdint>
 
-int main() {
+int main(void) {
 	using rope_t      = boost::text::basic_unencoded_rope<char16_t>;
 	using rope_view_t = boost::text::basic_unencoded_rope_view<char16_t>;
 	rope_t rope       = u"✨🌃⭐❣";

@@ -38,7 +38,7 @@
 #include <string>
 #include <vector>
 
-int main() {
+int main(void) {
 	std::string file_name          = "greeting.shift-jis.txt";
 	std::string expected_file_name = "greeting.utf-8.txt";
 	// open the desired files

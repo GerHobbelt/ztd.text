@@ -32,7 +32,7 @@
 
 #include <iostream>
 
-int main() {
+int main(void) {
 	std::cout << "=== Encoding Names ===" << std::endl;
 	std::cout << "Literal Encoding: "
 	          << ztd::__idk_detail::to_name(
