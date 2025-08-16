@@ -33,7 +33,7 @@
 
 #include <iostream>
 
-int main(int argc, char* argv[]) {
+int main(int argc, const char** argv) {
 	ztd::tests::keep_process_awake process_wake {};
 	if (!process_wake.awake_request_successful()) {
 		std::cerr << "[ztd.text/benchmarks] the process awake request did not set successfully; process may fall "
@@ -41,6 +41,8 @@ int main(int argc, char* argv[]) {
 		          << std::endl;
 	}
 	benchmark::Initialize(&argc, argv);
+	if (benchmark::ReportUnrecognizedArguments(argc, argv))
+		return 1;
 	benchmark::RunSpecifiedBenchmarks();
 	benchmark::Shutdown();
 	return 0;
